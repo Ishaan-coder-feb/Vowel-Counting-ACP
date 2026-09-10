@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Counting Vowels In Strings</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <h1>Counting Vowels In Strings</h1>
+    <p>Enter the string of which the vowels has to be counted.</p>
+    <p>*Please enter entire string in lowercase.</p>
+    <form action="/count" method="POST">
+        <label for="string">Enter String:</label>
+        <input type="text" name="string" id="string" required><br><br>
+        <button type="submit">Count Vowels</button>
+    </form>
+    <div class="result">
+        <h3>String:{{string}}</h3>
+        <h3>The number of vowels in the string is {{vowel}}.</h3>
+    </div>
+</body>
+
+</html>
